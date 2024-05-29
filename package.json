@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "dev": "wrangler dev src/index.js",
+    "deploy": "wrangler deploy --minify src/index.js"
+  },
+  "dependencies": {
+    "hono": "^4.4.0"
+  },
+  "devDependencies": {
+    "wrangler": "^3.47.0"
+  }
+}
