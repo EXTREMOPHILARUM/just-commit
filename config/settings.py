@@ -1,15 +1,18 @@
 import json
+import os
 
 class SettingsManager:
     def __init__(self, config_file='config/settings.json'):
         self.config_file = config_file
         self.settings = self.load_settings()
+        self.generate_sample_config()
 
     def load_settings(self):
         try:
             with open(self.config_file, 'r') as file:
                 return json.load(file)
         except FileNotFoundError:
+            self.generate_sample_config()
             return {}
 
     def save_settings(self):
@@ -22,6 +25,16 @@ class SettingsManager:
     def set_feature_status(self, feature_key, status):
         self.settings[feature_key] = status
         self.save_settings()
+
+    def generate_sample_config(self):
+        sample_config_path = 'config/sample_settings.json'
+        if not os.path.exists(sample_config_path):
+            sample_settings = {
+                "intelligent_branch_naming": True,
+                "enhanced_diff": True
+            }
+            with open(sample_config_path, 'w') as file:
+                json.dump(sample_settings, file, indent=4)
 
 if __name__ == "__main__":
     settings_manager = SettingsManager()

@@ -29,6 +29,10 @@ Just Commit is a Python-based CLI tool designed to enhance the git command line 
 
 Users can enable or disable LLM features through a configuration file. This enhances customization and allows for a tailored git experience. The configuration file is located at `config/settings.json` and follows the JSON format. Each LLM feature can be toggled on or off individually.
 
+## Initial Setup and Configuration
+
+For an easy first setup and an overview of all configurations, users are guided to the sample configuration file provided at `config/sample_settings.json`. This sample file demonstrates all configurable features with default settings, allowing users to quickly start with a pre-configured set of features. To use it, simply copy `config/sample_settings.json` to `config/settings.json`.
+
 ## Examples
 
 - **Branch Names**: `feature/add-login`, `bugfix/resolve-crash`, `refactor/improve-performance`

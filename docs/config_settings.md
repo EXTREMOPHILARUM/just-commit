@@ -4,6 +4,15 @@
 
 The `config/settings.py` module in the Just Commit tool is designed to manage configuration settings for the application. It allows users to enable or disable features by modifying the `config/settings.json` file. This document provides a comprehensive guide on how to use and modify these settings to customize your Just Commit experience.
 
+## Initial Setup Using Sample Configuration
+
+For an easy initial setup, a sample configuration file named `config/sample_settings.json` is provided. This file demonstrates all configurable features with default settings. To use it:
+
+1. Copy `config/sample_settings.json` to `config/settings.json`.
+2. Modify `config/settings.json` as needed to enable or disable features.
+
+This approach allows you to quickly start with a pre-configured set of features.
+
 ## Usage
 
 To modify the settings, navigate to the `config/settings.json` file. This file contains a JSON object where each key represents a feature within Just Commit, and the value (`true` or `false`) indicates whether the feature is enabled or disabled.
@@ -29,6 +38,15 @@ To enable a feature, set its corresponding value in `config/settings.json` to `t
 2. Locate the feature you wish to modify.
 3. Change the value to `true` (to enable) or `false` (to disable).
 4. Save the file.
+
+## Available Configurations
+
+The `config/sample_settings.json` file includes the following configurations with their default values:
+
+- `intelligent_branch_naming`: true
+- `enhanced_diff`: true
+
+These settings represent just a sample of what can be configured. Refer to the sample file for a complete list of available configurations.
 
 ## Example Usage in `config/settings.py`
 
