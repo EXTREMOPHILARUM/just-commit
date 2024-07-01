@@ -40,13 +40,12 @@ For an easy first setup and an overview of all configurations, users are guided 
 
 ## Installation and Usage
 
-To use the llama-cpp-python library and enable the LLM features of Just Commit, follow these steps:
+To install and use Just Commit as a Python package, follow these steps:
 
 1. Ensure Python 3.8 or higher is installed on your system.
 2. Clone the repository and navigate to the project directory.
-3. Install the required dependencies using `pip install -r requirements.txt`.
-4. Configure the `config/settings.json` file to enable or disable desired LLM features.
-5. Use the Just Commit CLI tool by executing `python just_commit.py` followed by your git command.
+3. Install the package using `pip install .`.
+4. Import and use the package modules in your Python scripts as needed.
 
 For more detailed instructions and examples, refer to the documentation in the `docs` folder.
 
