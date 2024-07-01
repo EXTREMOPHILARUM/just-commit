@@ -49,6 +49,41 @@ To install and use Just Commit as a Python package, follow these steps:
 
 For more detailed instructions and examples, refer to the documentation in the `docs` folder.
 
+## GitHub Actions Integration
+
+Just Commit now supports GitHub Actions, allowing you to automate your workflows directly from GitHub. This integration enables you to run tests, package your tool, and more, right from your GitHub repository.
+
+### Example GitHub Actions Workflow
+
+Below is an example of a GitHub Actions workflow file that you can use to set up your CI/CD pipeline with Just Commit. This workflow installs dependencies, runs tests, and packages the tool.
+
+```yaml
+name: Just Commit CI
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python 3.8
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt
+    - name: Run tests
+      run: |
+        pytest
+    - name: Package tool
+      run: |
+        python setup.py sdist bdist_wheel
+```
+
+This workflow is triggered on every push and pull request to the repository. It uses Python 3.8 for running the actions and includes steps for checking out the code, setting up Python, installing dependencies, running tests, and packaging the tool.
+
 ## Detailed Feature Documentation
 
 For comprehensive documentation on each feature, including usage examples, integration guidelines, and more, please visit the `docs` folder. Each component's documentation includes a link back to its source code for easy reference, ensuring a seamless navigation between documentation and implementation.
