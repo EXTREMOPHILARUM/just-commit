@@ -45,3 +45,7 @@ To use the llama-cpp-python library and enable the LLM features of Just Commit, 
 5. Use the Just Commit CLI tool by executing `python just_commit.py` followed by your git command.
 
 For more detailed instructions and examples, refer to the documentation in the `docs` folder.
+
+## Detailed Feature Documentation
+
+For comprehensive documentation on each feature, including usage examples, integration guidelines, and more, please visit the `docs` folder. Each component's documentation includes a link back to its source code for easy reference, ensuring a seamless navigation between documentation and implementation.
